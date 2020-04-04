@@ -7,7 +7,9 @@ Vagrant.configure("2") do |config|
         v.gui = true
         v.memory = 2048
         v.cpus = 2
+        
     end
+    config.disksize.size = "65000MB"
     config.vm.network "public_network", use_dhcp_assigned_default_route: true
     config.vm.provision "shell", inline: "sudo yum groupinstall -y 'gnome desktop'"
     config.vm.provision "shell", inline: "sudo yum install -y 'xorg*'"
