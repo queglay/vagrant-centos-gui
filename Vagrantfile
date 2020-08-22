@@ -16,5 +16,6 @@ Vagrant.configure("2") do |config|
     config.vm.provision "shell", inline: "sudo yum remove -y initial-setup initial-setup-gui"
     config.vm.provision "shell", inline: "sudo systemctl isolate graphical.target"
     config.vm.provision "shell", inline: "sudo systemctl set-default graphical.target"
+    config.vm.provision "shell", inline: "sudo yum install -y python3"
     config.vm.provision :reload
 end
