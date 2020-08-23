@@ -17,5 +17,6 @@ Vagrant.configure("2") do |config|
     config.vm.provision "shell", inline: "sudo systemctl isolate graphical.target"
     config.vm.provision "shell", inline: "sudo systemctl set-default graphical.target"
     config.vm.provision "shell", inline: "sudo yum install -y python3"
+    config.vm.provision "shell", inline: "sudo sed -i 's/.*SELINUX=.*/SELINUX=disabled/' /etc/selinux/config"
     config.vm.provision :reload
 end
