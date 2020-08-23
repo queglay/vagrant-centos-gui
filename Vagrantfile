@@ -1,7 +1,7 @@
 # https://codingbee.net/vagrant/vagrant-enabling-a-centos-vms-gui-mode
 
 Vagrant.configure("2") do |config|
-    config.vm.box = "centos/7"
+    config.vm.box = "bento/centos-7"
     config.vagrant.plugins = ['vagrant-vbguest', 'vagrant-disksize', 'vagrant-reload']
     config.vm.provider "virtualbox" do |v|
         v.gui = true
