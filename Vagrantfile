@@ -14,12 +14,7 @@ Vagrant.configure("2") do |config|
     
     config.vagrant.plugins = ['vagrant-vbguest', 'vagrant-disksize', 'vagrant-reload']
     config.disksize.size = '100GB'
-    
-    # config.vm.define "node01" do |node1|
-    #     # node1.vm.hostname = "node01"
-    #     # node1.vm.network "private_network", ip: "192.168.56.121"
-    #     config.vm.provision :shell, :inline => common
-    # end
+
 
     config.vm.provider "virtualbox" do |vm|
         vm.gui = true
